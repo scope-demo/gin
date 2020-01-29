@@ -29,6 +29,7 @@ jobs:
       with:
         dsn: ${{secrets.SCOPE_DSN}}
         auto-instrument: false
+        enable-benchmarks: false
 
     - name: Scope for Go
       uses: undefinedlabs/scope-for-go-action@master
@@ -40,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: Scope for Go logs
-        path: /home/runner/scope-logs
+        path: /home/runner/.scope-results
