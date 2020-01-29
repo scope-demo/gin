@@ -24,15 +24,8 @@ jobs:
             dep ensure
         fi
         
-    - name: Scope for Go no auto instrument
-      uses: undefinedlabs/scope-for-go-action@master
-      with:
-        dsn: ${{secrets.SCOPE_DSN}}
-        auto-instrument: false
-        enable-benchmarks: false
-
     - name: Scope for Go
-      uses: undefinedlabs/scope-for-go-action@master
+      uses: undefinedlabs/scope-for-go-action@codepath
       with:
         dsn: ${{secrets.SCOPE_DSN}}
 
