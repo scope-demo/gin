@@ -8,9 +8,17 @@ workflows:
     jobs:
       - scope/test:
           dsn: $SCOPE_DSN
+          
   scope_test2:
     jobs:
       - scope/test:
           dsn: $SCOPE_DSN
           auto-instrument: false
+
+  scope_test3:
+    jobs:
+      - scope/test:
+          dsn: $SCOPE_DSN
+          auto-instrument: false
+          enable-benchmarks: false
 
