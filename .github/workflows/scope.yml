@@ -25,6 +25,7 @@ jobs:
         dsn: ${{secrets.SCOPE_DSN}}
         version: master
         no-parallel: true
+        
 
     - name: Upload Scope logs
       if: always()
